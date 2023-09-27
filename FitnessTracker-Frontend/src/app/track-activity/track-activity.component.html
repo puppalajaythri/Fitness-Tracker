@@ -1,0 +1,30 @@
+<b><h6 style="color:#01121493;
+    text-align: center;
+    margin: 20px auto;
+    ">{{name}}, Welcome to the profile</h6></b>
+
+<div>
+    <h2>Track Activity</h2>
+    <div class="option-buttons">
+      <button (click)="selectOption('history')" [class.active]="selectedOption === 'history'">History</button>
+      <button (click)="selectOption('achievements')" [class.active]="selectedOption === 'achievements'">Achievements</button>
+    </div>
+    <div *ngIf="selectedOption === 'history'">
+      <h3>History Content</h3>
+      <button (click)="clearData()">Clear History</button>
+      <div>
+        <ul>
+          <li *ngFor="let activity of stepsTracker">{{ activity }}</li>
+        </ul>
+    </div>
+    </div>
+    <div *ngIf="selectedOption === 'achievements'">
+      <h3>Achievements Content</h3>
+      <div>
+        <ul>
+          <li *ngFor="let history of goalHistory">{{ history }}</li>
+        </ul>
+    </div>
+    </div>
+  </div>
+  

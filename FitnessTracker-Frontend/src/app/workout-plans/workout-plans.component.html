@@ -1,0 +1,169 @@
+<b><h6 style="color:#01121493;
+  text-align: center;
+  margin: 20px auto;
+  ">{{name}}, Welcome to the profile</h6></b>
+
+<div>
+  <h2 *ngIf="selectedLevel === ''" style="color:red;">
+      Please select Fitness Level in Goal Setting Section
+  </h2>
+  <div *ngIf="selectedLevel === 'beginner'">
+    <h2>Beginner Workout Schedule</h2>
+  
+    <p>If you're new to exercise, remember these basics and give yourself time to get used to regular workouts.</p>
+    <ul>
+      <li>Ease into exercise. Start with a simple cardio program and a full-body strength training routine. If that's too much, start with strength training and let that be enough. Most strength training workouts will also increase your heart rate, working your cardiovascular system.</li>
+      <li>Be sure to rest and recover. You may need extra recovery days to allow your body to rest and heal. It's normal to be sore when you try new activities, but if you can't move the next day, that means you overdid it and may need to back off your next workout.</li>
+      <li>Make it work for you. A typical beginner program will include two to three days of cardio and two days of strength training. You can also combine these workouts if you do not have five days to devote to exercise.</li>
+      <li>Learn how to monitor your intensity. Most beginners will start working out at a moderate intensity. That means you're at about a Level 5 on the perceived exertion scale. Or you can use the talk test: If you can carry on a somewhat breathy conversation while you're working out, that's usually a moderate intensity.</li>
+    </ul>
+  
+    <h3>Sample Weekly Workout Plan</h3>
+    <p>This sample program is appropriate for someone just getting started with—or getting back to—exercise. Remember that it is just a suggestion, and you may find that different workouts work better for you (for example, swimming instead of cycling).</p>
+    <p>Remember to start every workout with 5 to 10 minutes of light cardio and stretching, and to cool down with flexibility exercises.</p>
+  
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>Workout</th>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>Cardio: 10 to 30 minutes, such as:
+          <ul>
+            <li>Beginner Stationary Bike Workout</li>
+            <li>Beginner Walking Workout</li>
+            <li>Beginner Elliptical Workout</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>Total body strength and core training, such as:
+          <ul>
+            <li>Beginner Total Body Strength</li>
+            <li>Beginner Total Body Strength Level 2</li>
+            <li>Beginner Total Body Strength Level 3</li>
+          </ul>
+        </td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>Rest or gentle yoga/stretching</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>Cardio: 10 to 30 minutes; do the same workout you did on Monday or a new one</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>Total body strength and core training; repeat Tuesday's workout to practice the exercises and build the strength and endurance to do more</td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td>Rest or optional cardio: Do something less structured, like taking a walk or a leisurely bike ride</td>
+      </tr>
+      <tr>
+        <td>Sunday</td>
+        <td>Rest</td>
+      </tr>
+    </table>
+  </div>
+  
+  
+  <div *ngIf="selectedLevel === 'intermediate'">
+    <h2>Intermediate Workout Schedule</h2>
+  
+    <p>If you've been exercising for at least three months consistently, you typically fall into this category. If your goal is to lose weight, you want to work your way up to 20 to 60 minutes of cardio about five or more times a week.</p>
+    <p>This is a great time to try interval training once or twice a week, which will give you more bang for your workout buck.</p>
+    <p>Don't skimp on strength training. It builds muscle and boosts metabolism. Your strength training schedule will depend on what type of workouts you're doing (e.g., total-body training or a split routine).</p>
+    <p>And, when possible, be sure to use a mirror to check and adjust your form.</p>
+    <p>You can do cardio and weight training on the same day. It is best to do the workout that best matches your goals first. If your goal is to improve muscular strength or size, perform your strength training routine first. If your goal is to work on cardiovascular health, do cardio first. If you will be doing an intense or demanding weight training session, always perform it first so reduce the risks of injury from fatigue leading to form mistakes.</p>
+  
+    <h3>Weekly Split Workout Plan</h3>
+    <p>The following schedule includes a split routine for your upper and lower body, allowing you to focus more attention on each muscle group.</p>
+    <p>It is not necessary to do split routines, and other types of weight lifting routines may be better for you, such as full-body, body part splits, push-pull-leg workouts, and more.</p>
+  
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>Workout</th>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>30-Minute Cardio Medley Workout + Upper Body Training + Stretch</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>30-Minute Treadmill Interval Workout + Core Training + Stretch</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>Low Impact Cardio Blast Workout (two circuits) + Lower body strength + Lower body stretch</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>Rest or gentle yoga/stretching</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>Total Body Strength or Circuit Training</td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td>Cardio Endurance Workout</td>
+      </tr>
+      <tr>
+        <td>Sunday</td>
+        <td>Rest</td>
+      </tr>
+    </table>
+  </div>
+  
+  
+  <div *ngIf="selectedLevel === 'advanced'">
+    <h2>Advanced Workout Schedule</h2>
+  
+    <p>If you've been exercising regularly for several months and do a variety of activities, you fall into this category. To continue making progress and beat plateaus, you'll need to add intensity and variety.</p>
+    <p>Mix up your workouts to keep things interesting. As an advanced exerciser, you have lots of options for scheduling your workouts. If you want to focus on strength and muscle, you can split your strength routine even further, doing push exercises one day and pull exercises the next.</p>
+    <p>You can also make your cardio more intense. You can do this by incorporating high-intensity interval training, high-intensity circuit training, or other advanced techniques to burn calories and build endurance.</p>
+    <p>Rest and recovery are critical. The real focus should be on allowing your body to rest between high-intensity workouts. Too much intensity can cause injury, overtraining, and burnout.</p>
+  
+    <h3>Weekly Split Workout Plan</h3>
+    <table>
+      <tr>
+        <th>Day</th>
+        <th>Workout</th>
+      </tr>
+      <tr>
+        <td>Monday</td>
+        <td>Chest Shoulders, and Triceps + HIIT Cardio</td>
+      </tr>
+      <tr>
+        <td>Tuesday</td>
+        <td>Lower Body and Core</td>
+      </tr>
+      <tr>
+        <td>Wednesday</td>
+        <td>Back and Biceps + Boredom Buster Cardio</td>
+      </tr>
+      <tr>
+        <td>Thursday</td>
+        <td>Rest or gentle yoga/stretching</td>
+      </tr>
+      <tr>
+        <td>Friday</td>
+        <td>Total Body Blast</td>
+      </tr>
+      <tr>
+        <td>Saturday</td>
+        <td>HIIT Tabata Cardio Workout</td>
+      </tr>
+      <tr>
+        <td>Sunday</td>
+        <td>Rest</td>
+      </tr>
+    </table>
+  </div>
+  <p><b>Refer Video Section for demonstration on the workout types</b></p>
+</div>

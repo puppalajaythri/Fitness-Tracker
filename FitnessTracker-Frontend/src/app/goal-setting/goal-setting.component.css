@@ -1,0 +1,139 @@
+.goal-tracker {
+  background-color: #007bff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 20px auto;
+  animation: slideIn 1s ease-in-out; 
+}
+
+.container1 {
+  background-color: #ff5733;
+}
+
+.container2 {
+  background-color: #33ff57; 
+}
+
+.container3 {
+  background-color: #5733ff; 
+}
+
+div {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+  box-sizing: border-box;
+  margin: 20px auto;
+  animation: slideIn 1s ease-in-out;
+}
+
+h2 {
+  color: #007bff;
+  font-size: 28px;
+  margin-bottom: 20px;
+}
+
+div > div {
+  margin-top: 20px;
+}
+
+h3 {
+  color: #333;
+  font-size: 24px;
+  margin-bottom: 15px;
+}
+
+label {
+  font-weight: bold;
+  font-size: 18px;
+  display: block;
+  margin-bottom: 8px;
+}
+
+input[type="number"] {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%;
+  margin-top: 5px;
+}
+
+button {
+  padding: 12px 24px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: background-color 0.3s ease;
+  margin-top: 15px;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+p {
+  font-size: 18px;
+  margin-top: 10px;
+}
+
+div[ngIf="goalAchieved"] {
+  background-color: #5cb85c;
+  padding: 15px;
+  border-radius: 5px;
+  color: white;
+  margin-top: 20px;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+li {
+  font-size: 18px;
+  margin-top: 10px;
+  padding-left: 30px;
+  position: relative;
+  line-height: 1.6;
+  list-style: none;
+}
+
+li::before {
+  content: '\2022';
+  position: absolute;
+  left: 0;
+  color: #007bff;
+  font-weight: bold;
+  top: 0.3rem;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideIn {
+  from {
+    transform: translateX(-20%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}

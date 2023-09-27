@@ -1,0 +1,105 @@
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    animation: fadeInContainer 1s ease-in-out, slideInContainer 0.5s ease-in-out;
+  }
+  
+  h1 {
+    color: #007bff;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  label {
+    display: block;
+    font-weight: bold;
+    margin-bottom: 5px;
+    color: #333;
+  }
+  
+  select {
+    padding: 10px;
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    margin-bottom: 15px;
+    font-size: 16px;
+  }
+  
+  h2 {
+    color: #333;
+    font-size: 20px;
+    margin-top: 20px;
+  }
+  
+  h3 {
+    color: #007bff;
+    font-size: 18px;
+    margin-top: 15px;
+  }
+  
+  p {
+    font-size: 16px;
+    margin: 10px 0;
+  }
+  
+  ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  li {
+    font-size: 16px;
+    margin-top: 5px;
+    padding-left: 20px;
+    position: relative;
+  }
+  
+  li::before {
+    content: '\2022'; 
+    position: absolute;
+    left: 0;
+    color: #007bff;
+    font-weight: bold;
+    top: 3px;
+  }
+  
+  tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  td.active {
+    background-color: #007bff;
+    color: white;
+  }
+  
+  @keyframes fadeIn {
+    from {
+      opacity: 0;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+ 
+  .container, label, select, h2, h3, p, ul, li {
+    animation: fadeIn 1s ease-in-out;
+  }
+  
+  @keyframes fadeInContainer {
+    from {
+      opacity: 0;
+      transform: translateY(-20px);
+    }
+    to {
+      opacity: 1;
+      transform: translateY(0);
+    }
+  }

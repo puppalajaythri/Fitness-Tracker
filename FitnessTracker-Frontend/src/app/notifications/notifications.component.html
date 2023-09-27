@@ -1,0 +1,15 @@
+<div class="page-container">
+  <div class="centered-content">
+    <b><h6 class="welcome-text">{{ name }}, Welcome to the profile</h6></b>
+
+    <button (click)="clear()" class="clear-button">Clear</button>
+
+    <h3 class="achievements-title">Notifications List</h3>
+
+    <div class="achievements-list">
+      <ul>
+        <li *ngFor="let notifs of notificationsData" class="achievement-item">{{ notifs }}</li>
+      </ul>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,25 @@
+<div class="menu-container" *ngIf="!isLoginRoute() && !isRegisterRoute() && !isMenuRoute()">
+    <div class="menu-item" routerLink="goal-setting" routerLinkActive="active" >
+        Goal Setting
+    </div>
+    <div class="menu-item" routerLink="workout-plans" routerLinkActive="active">
+        Workout Plans
+    </div>
+    <div class="menu-item" routerLink="nutrition-diet" routerLinkActive="active">
+        Nutrition Diet
+    </div>
+    <div class="menu-item" routerLink="track-activity" routerLinkActive="active">
+        Track Activity
+    </div>
+    <div class="menu-item" routerLink="video-demo" routerLinkActive="active">
+        Video Demonstrations
+    </div>
+    <div class="menu-item" routerLink="notifications" routerLinkActive="active">
+        Notifications
+    </div>
+    <div class="menu-item" routerLink="../login" routerLinkActive="active">
+        Log out
+    </div>
+</div> 
+
+<router-outlet></router-outlet>

@@ -1,0 +1,111 @@
+<b><h6 style="color:#01121493;
+    text-align: center;
+    margin: 20px auto;
+    ">{{name}}, Welcome to the profile</h6></b>
+
+<div class="container">
+    <h1>Nutrition Plan</h1>
+    
+    <div>
+      <label for="goalDropdown">Select Your Goal:</label>
+      <select id="goalDropdown" [(ngModel)]="selectedGoal" (change)="onGoalChange()">
+        <option value="weightGain">Weight Gain</option>
+        <option value="weightLoss">Weight Loss</option>
+      </select>
+    </div>
+
+    <h2 *ngIf="selectedLevel === ''" style="color:red;">
+        Please select Fitness Level in Goal Setting Section
+    </h2>
+    
+    <div *ngIf="selectedLevel && selectedGoal">
+      <h2>{{ selectedGoal === 'weightGain' ? 'Weight Gain' : 'Weight Loss' }} Nutrition Plan:</h2>
+
+      <div *ngIf="selectedLevel === 'beginner' && selectedGoal === 'weightGain'">
+        <h3>Beginner Level (Weight Gain):</h3>
+        <p>Week 1-4:</p>
+        <p>Calories: Aim for a daily surplus of 250-500 calories.</p>
+        <p>Protein: Consume 1.2-1.5 grams of protein per kilogram of body weight.</p>
+        <p>Carbohydrates: Make carbs about 45-55% of your daily calories.</p>
+        <p>Fats: Keep fats at about 20-30% of your daily calories.</p>
+        <p>Sample Meal Plan:</p>
+        <ul>
+          <li>Breakfast: Oatmeal with banana and almonds.</li>
+          <li>Snack: Greek yogurt with honey.</li>
+          <li>Lunch: Grilled chicken breast with quinoa and mixed vegetables.</li>
+          <li>Snack: A handful of mixed nuts.</li>
+          <li>Dinner: Salmon with sweet potato and broccoli.</li>
+        </ul>
+      </div>
+
+      <div *ngIf="selectedLevel === 'intermediate' && selectedGoal === 'weightGain'">
+        <h3>Intermediate Level (Weight Gain):</h3>
+        <p>Week 5-8:</p>
+        <p>Calories: Gradually increase the daily surplus to 500-750 calories.</p>
+        <p>Fine-tune macronutrient ratios based on your preferences and body's response.</p>
+        <p>Consider pre- and post-workout nutrition for muscle recovery.</p>
+        <p>Sample Meal Plan:</p>
+        <ul>
+          <li>Breakfast: Scrambled eggs with spinach and whole-grain toast.</li>
+          <li>Snack: Cottage cheese with berries.</li>
+          <li>Lunch: Turkey and avocado wrap with a side salad.</li>
+          <li>Snack: Hummus with carrot and cucumber sticks.</li>
+          <li>Dinner: Beef stir-fry with brown rice and mixed vegetables.</li>
+        </ul>
+      </div>
+
+      <div *ngIf="selectedLevel === 'advanced' && selectedGoal === 'weightGain'">
+        <h3>Advanced Level (Weight Gain):</h3>
+        <p>Week 9 and beyond:</p>
+        <p>Continue increasing calories as needed for your goals.</p>
+        <p>Monitor your progress closely and make adjustments.</p>
+        <p>Consider nutrient timing for optimal performance.</p>
+        <p>Sample Meal Plan:</p>
+        <ul>
+          <li>Breakfast: Protein smoothie with spinach, protein powder, and almond butter.</li>
+          <li>Snack: A protein bar and a piece of fruit.</li>
+          <li>Lunch: Quinoa salad with grilled shrimp and avocado.</li>
+          <li>Snack: Low-fat Greek yogurt with walnuts.</li>
+          <li>Dinner: Grilled steak with quinoa and roasted Brussels sprouts.</li>
+        </ul>
+      </div>
+
+      <div *ngIf="selectedLevel === 'beginner' && selectedGoal === 'weightLoss'">
+        <h3>Beginner Level (Weight Loss):</h3>
+        <p>Week 1-4:</p>
+        <p>Calories: Aim for a daily deficit of 300-500 calories.</p>
+        <p>Protein: Consume 1.2-1.5 grams of protein per kilogram of body weight.</p>
+        <p>Carbohydrates: Make carbs about 45-50% of your daily calories.</p>
+        <p>Fats: Keep fats at about 20-30% of your daily calories.</p>
+        <p>Sample Meal Plan:</p>
+        <ul>
+          <li>Breakfast: Greek yogurt with berries and a drizzle of honey.</li>
+          <li>Snack: Celery sticks with peanut butter.</li>
+          <li>Lunch: Grilled chicken salad with a vinaigrette dressing.</li>
+          <li>Snack: Sliced bell peppers with hummus.</li>
+          <li>Dinner: Baked salmon with quinoa and steamed asparagus.</li>
+        </ul>
+      </div>
+      
+      <div *ngIf="selectedLevel === 'intermediate' && selectedGoal === 'weightLoss'">
+        <h3>Intermediate Level (Weight Loss):</h3>
+        <p>Week 5-8:</p>
+        <p>Calories: Gradually decrease the daily deficit as you approach your goal weight.</p>
+        <p>Focus on portion control and mindful eating.</p>
+        <p>Consider intermittent fasting or time-restricted eating, if appropriate.</p>
+        <p>Sample Meal Plan:</p>
+        <ul>
+          <li>Breakfast: Veggie omelet with a side of mixed berries.</li>
+          <li>Snack: Almonds and a small apple.</li>
+          <li>Lunch: Turkey and avocado lettuce wraps.</li>
+          <li>Snack: Cottage cheese with pineapple chunks.</li>
+          <li>Dinner: Grilled shrimp with cauliflower rice and broccoli.</li>
+        </ul>
+      </div>
+      
+      <div *ngIf="selectedLevel === 'advanced' && selectedGoal === 'weightLoss'">
+        <h3>Advanced Level (Weight Loss):</h3>
+        <p>Week 9 and beyond:</p>
+        <p>Continue monitoring calorie intake and adjust as needed.</p>
+        <p>In
+  

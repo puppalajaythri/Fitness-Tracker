@@ -1,0 +1,40 @@
+<b><h6 style="color:#01121493;
+    text-align: center;
+    margin: 20px auto;
+    ">{{name}}, Welcome to the profile</h6></b>
+
+<div class="container">
+    <div class="header">
+      Select Your Workout Video
+    </div>
+
+    <h4 *ngIf="selectedWorkoutLevel === ''" style="color:red;">
+        Please select Fitness Level in Goal Setting Section
+    </h4>
+  
+    <div *ngIf="selectedWorkoutLevel">
+      <label for="workoutSelect">Select Workout:</label>
+      <select id="workoutSelect" [(ngModel)]="selectedWorkoutOption" (change)="loadVideo()">
+        <ng-container *ngIf="selectedWorkoutLevel === 'beginner'">
+          <option *ngFor="let option of beginnerWorkoutOptions" [value]="option">{{ option }}</option>
+        </ng-container>
+        <ng-container *ngIf="selectedWorkoutLevel === 'intermediate'">
+          <option *ngFor="let option of intermediateWorkoutOptions" [value]="option">{{ option }}</option>
+        </ng-container>
+        <ng-container *ngIf="selectedWorkoutLevel === 'advanced'">
+          <option *ngFor="let option of advancedWorkoutOptions" [value]="option">{{ option }}</option>
+        </ng-container>
+      </select>
+    </div>
+  
+    <div *ngIf="selectedVideoUrl" class="spacing">
+      <iframe
+        [src]="selectedVideoUrl"
+        frameborder="0"
+        allowfullscreen
+        class="fade-in"
+      ></iframe>
+    </div>
+    <button (click)="loadVideo()">Load Video</button>
+  </div>
+  

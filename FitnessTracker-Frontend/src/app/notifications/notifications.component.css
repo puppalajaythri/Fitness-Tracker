@@ -1,0 +1,130 @@
+/* CSS */
+/* Style for the welcome message */
+.welcome-text {
+  color: #01121493;
+  text-align: center;
+  margin: 20px auto;
+  font-size: 16px;
+}
+
+/* Style for the clear button */
+.clear-button {
+  display: block;
+  margin: 10px auto;
+  padding: 10px 20px;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.clear-button:hover {
+  background-color: #0056b3;
+}
+
+/* Style for the achievements title */
+.achievements-title {
+  font-size: 24px;
+  color: #333;
+  margin-top: 20px;
+}
+
+/* Style for the achievements list */
+.achievements-list ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+}
+
+/* Style for individual achievement items */
+.achievement-item {
+  font-size: 16px;
+  margin-top: 5px;
+  padding-left: 20px;
+  position: relative;
+}
+
+/* Custom bullet point for achievement items */
+.achievement-item::before {
+  content: '\2022'; /* Bullet point character */
+  position: absolute;
+  left: 0;
+  color: #007bff;
+  font-weight: bold;
+  top: 3px;
+}
+
+.centered-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Center horizontally */
+  
+  min-height: 100vh; /* Make it take up the entire viewport height */
+  text-align: center; /* Center text horizontally */
+}
+
+/* Animation for the welcome message */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Apply animation to the welcome message */
+.welcome-text {
+  animation: fadeIn 1s ease-in-out;
+}
+
+/* Animation for the clear button */
+@keyframes scaleIn {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
+  }
+}
+
+/* Apply animation to the clear button */
+.clear-button {
+  animation: scaleIn 0.5s ease-in-out;
+}
+
+/* Animation for achievement items */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Apply animation to achievement items */
+.achievement-item {
+  animation: slideIn 0.3s ease-in-out;
+}
+
+/* CSS */
+/* Style for the page container */
+.page-container {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  animation: fadeInContainer 1s ease-in-out, slideInContainer 0.5s ease-in-out;
+}
+
+.achievements-list {
+  color: #007bff; 
+}

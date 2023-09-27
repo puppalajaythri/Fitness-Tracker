@@ -1,0 +1,104 @@
+div {
+  max-width: 800px;
+  margin: 0 auto;
+  padding: 20px;
+  font-family: Arial, sans-serif;
+  animation: fadeIn 1s ease-in-out; 
+}
+
+div.ngIf-message {
+  color: red;
+  font-weight: bold;
+  animation: fadeIn 1s ease-in-out; 
+}
+
+h2 {
+  color: #007bff;
+  animation: slideInLeft 1s ease-in-out; 
+}
+
+p {
+  margin: 10px 0;
+  animation: fadeIn 1s ease-in-out;
+}
+
+ul {
+  margin-left: 20px;
+  padding-left: 20px;
+  animation: fadeIn 1s ease-in-out; 
+}
+
+li {
+  margin: 5px 0;
+  animation: fadeIn 1s ease-in-out; 
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+  animation: fadeIn 1s ease-in-out; 
+}
+
+th {
+  background-color: #007bff;
+  color: white;
+  text-align: left;
+  padding: 8px;
+  animation: fadeIn 1s ease-in-out; 
+}
+
+td {
+  padding: 8px;
+  border-bottom: 1px solid #ccc;
+  animation: fadeIn 1s ease-in-out;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+  animation: fadeIn 1s ease-in-out; 
+}
+
+td.active {
+  background-color: #007bff;
+  color: white;
+  animation: fadeIn 1s ease-in-out; 
+}
+
+h3 {
+  color: #333;
+  animation: slideInRight 1s ease-in-out;
+}
+
+.ngIf-message {
+  color: red;
+  font-weight: bold;
+  animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    transform: translateX(-100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    transform: translateX(100%);
+  }
+  to {
+    transform: translateX(0);
+  }
+}
